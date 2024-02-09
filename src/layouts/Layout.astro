@@ -1,0 +1,28 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/global/Footer.astro';
+import Nav from '../components/global/Nav.astro';
+import Emailjs from '../services/Emailjs.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="selection:bg-carrot selection:text-white">
+	<head>
+		<BaseHead />		
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+		<Emailjs />
+	</head>
+	<body class="mx-auto bg-black 2xl:max-w-7xl">
+		<Nav />
+		<slot />
+		<Footer />
+	</body>
+</html>

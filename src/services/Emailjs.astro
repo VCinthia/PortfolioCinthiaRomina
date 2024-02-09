@@ -1,0 +1,56 @@
+<script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+<script type="text/javascript">
+    (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("nU6HbPT83xhjFqJ5R");
+    })();
+</script>
+
+<script type="text/javascript">
+    window.onload = function () {
+        document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+                emailjs
+                    .sendForm("service_qurv8ob", "template_eh54vr8", this)
+                    .then(
+                        function () {
+                            console.log("SUCCESS!");
+                            resetForm();                                
+                                setTimeout(function () {
+                                    showSendMessageButton();
+                                }, 2000);
+                                showSuccessMessage();
+                        },
+                        function (error) {
+                            console.log("FAILED...", error);
+                            showErrorMessage();
+                        },
+                    );
+            });
+
+        function showSuccessMessage() {
+            document.getElementById("submitSuccessMessage").style.display = "block";
+            document.getElementById("submitMessage").style.display = "none";
+        }
+
+        function showErrorMessage() {
+            document.getElementById("submitMessage").style.display = "none";
+            document.getElementById("submitErrorMessage").style.display = "block";
+        }
+
+        function resetForm() {
+            document.getElementById("contact-form").reset();            
+        }
+
+        function showSendMessageButton() {
+            document.getElementById("submitSuccessMessage").style.display = "none";
+            document.getElementById("submitMessage").style.display = "initial";
+        }
+    };
+</script>
+

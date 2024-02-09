@@ -1,0 +1,201 @@
+---
+const TECHNOLOGIES = [
+    {
+        title: "FRAMEWORKS & TOOLS",
+        list: [
+            {
+                title: "ANGULAR",
+                img: "/resources/img-technologies/angular.webp",
+            },
+            {
+                title: "NESTJS",
+                img: "/resources/img-technologies/nestjs.webp",
+            },
+            {
+                title: "ASTRO",
+                img: "/resources/img-technologies/astro.webp",
+            },
+            {
+                title: "HTML",
+                img: "/resources/img-technologies/html.webp",
+            },
+            {
+                title: "CCS",
+                img: "/resources/img-technologies/css.webp",
+            },
+            {
+                title: "JavaScript",
+                img: "/resources/img-technologies/js.webp",
+            },
+            {
+                title: "TypeScript",
+                img: "/resources/img-technologies/ts.webp",
+            },
+            {
+                title: "TAILWIND",
+                img: "/resources/img-technologies/tcss.webp",
+            },
+        ],
+    },
+    {
+        title: "PLINPLIN",
+        list: [
+            {
+                title: "ANGULAR",
+                img: "/resources/img-technologies/angular.webp",
+            },
+            {
+                title: "NESTJS",
+                img: "/resources/img-technologies/nestjs.webp",
+            },
+            {
+                title: "ASTRO",
+                img: "/resources/img-technologies/astro.webp",
+            },
+            {
+                title: "HTML",
+                img: "/resources/img-technologies/html.webp",
+            },
+            {
+                title: "CCS",
+                img: "/resources/img-technologies/css.webp",
+            },
+            {
+                title: "JavaScript",
+                img: "/resources/img-technologies/js.webp",
+            },
+            {
+                title: "TypeScript",
+                img: "/resources/img-technologies/ts.webp",
+            },
+            {
+                title: "TAILWIND",
+                img: "/resources/img-technologies/tcss.webp",
+            },
+        ],
+    },
+];
+---
+
+<section>
+    <div class="mx-auto border-white/20 border-x max-w-7xl">
+        <div class="mx-auto p-8 items-start justify-between w-full">
+            <div class="text-white text-center items-center mx-auto">
+                <p class="uppercase font-display text-2xl">Tecnologías</p>
+            </div>
+        </div>
+        <div
+            class="mx-auto max-w-7xl border-white/20 border-x"
+            x-data=`{ init() {
+              new Splide(this.$refs.splide, {
+  
+                  perPage: 1,
+                  gap: '0rem',
+                  breakpoints: {
+                      640: {
+                          perPage: 1,
+                      },
+                  },
+  
+              }).mount()
+          },
+      }`
+        >
+            <section
+                class="splide is-initialized splide--slide splide--ltr splide--draggable is-active"
+                aria-label="Splide/Alpine.js"
+                x-ref="splide"
+                id="splide01"
+                aria-roledescription="carousel"
+            >
+                <div class="splide__arrows splide__arrows--ltr items-center">
+                    <button
+                        class="splide__arrow splide__arrow--prev  bg-carrot"
+                        type="button"
+                        aria-label="Previous slide"
+                        aria-controls="splide01-track"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 40 40"
+                            width="40"
+                            height="40"
+                            focusable="false"
+                            ><path
+                                d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+                            ></path></svg
+                        ></button
+                    >
+                    <button
+                        class="splide__arrow splide__arrow--next  bg-carrot"
+                        type="button"
+                        disabled=""
+                        aria-label="Next slide"
+                        aria-controls="splide01-track"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 40 40"
+                            width="40"
+                            height="40"
+                            focusable="false"
+                            ><path
+                                d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"
+                            ></path></svg
+                        ></button
+                    >
+                </div>
+                <div
+                    class="h-full splide__track splide__track--slide splide__track--ltr splide__track--draggable"
+                    id="splide01-track"
+                    style="padding-left: 0px; padding-right: 0px;"
+                    aria-live="polite"
+                    aria-atomic="true"
+                    aria-busy="false"
+                >
+                    <ul
+                        class="splide__list"
+                        id="splide01-list"
+                        role="presentation"
+                        style="transform: translateX(-2040px);"
+                    >
+                        <!-- PRUEBA DE RECORRER-->
+                        {
+                            TECHNOLOGIES.map((tech) => (
+                                <li
+                                    class="flex justify-center flex-col splide__slide is-prev"
+                                    id="splide01-slide03"
+                                    role="tabpanel"
+                                    aria-roledescription="slide"
+                                    aria-label="3 of 4"
+                                    style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
+                                    aria-hidden="true"
+                                >
+                                    <div class="text-white text-xs order-first p-3 text-center lg:border-r lg:border-white/20">
+                                        <span class="block ">{tech.title}</span>
+
+                                        <div class="m-3 sm:flex sm:justify-around text-white text-xs order-first p-1 text-center lg:border-r lg:border-white/20 sm:flex-row">
+                                            {tech.list.map((e) => (
+                                                <div class="flex justify-center gap-1 flex-col items-center mb-4">
+                                                    <img
+                                                        class="w-5 justify-center"
+                                                        src="../../../resources/logo-technologies/800px-HTML5_Badge.svg-min.png"
+                                                        src={e.img}
+                                                    />
+                                                    <div class="mb-1  font-extralight">
+                                                       <p class="mb-1">
+                                                        {e.title}
+                                                        </p> 
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </li>
+                            ))
+                        }
+                        <!-- -->
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

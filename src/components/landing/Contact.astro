@@ -1,0 +1,144 @@
+<section id="contact" class="text-white mx-auto">
+    <div class="mx-auto max-w-7xl border-x border-white/20 px-8 py-12">
+        <!-- <div class="contact-form" > -->
+        <h1 class="text-white text-center lg:text-3xl pb-6">
+            ¿Listo para llevar tu proyecto al siguiente nivel? ¡Hablemos!
+        </h1>
+        <form id="contact-form" class="border border-white/20">
+            <div class="border-b border-white/20 py-4 bg-accent-500">
+                <span
+                    class="text-center block font-display font-extrabold text-md"
+                    >CONTACTO</span
+                >
+            </div>
+            <table class="border-white/20 bg-accent-500 w-full">
+                <tr class="border-b border-white/20 bg-accent-500">
+                    <td class="border-r p-2 border-white/20"
+                        ><label
+                            class="text-white text-xs order-first p-3 text-center"
+                            for="nombre">Nombre</label
+                        ></td
+                    >
+                    <td
+                        ><input
+                            style="border: none !important; outline: none !important; box-shadow: none !important;"
+                            class="resize-none bg-inherit h-full w-full text-xs p-3 focus:outline-none"
+                            placeholder="Ingresá tu nombre"
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr class="border-b border-white/20 bg-accent-500">
+                    <td class="border-r p-2 border-white/20"
+                        ><label
+                            class="text-white text-xs order-first p-3 text-center"
+                            for="email">Email</label
+                        ></td
+                    >
+                    <td
+                        ><input
+                            style="border: none !important; outline: none !important; box-shadow: none !important;"
+                            class="resize-none bg-inherit h-full w-full text-xs p-3 focus:outline-none"
+                            placeholder="Ingresá tu email"
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr class="border-b border-white/20 bg-accent-500">
+                    <td class="border-r p-2 border-white/20"
+                        ><label
+                            class="text-white text-xs order-first p-3 text-center"
+                            for="tel">Celular</label
+                        ></td
+                    >
+                    <td
+                        ><input
+                            style="border: none !important; outline: none !important; box-shadow: none !important;"
+                            class="resize-none bg-inherit h-full w-full text-xs p-3 focus:outline-none"
+                            placeholder="Ingresá tu celular"
+                            type="tel"
+                            id="tel"
+                            name="tel"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr class="border-b border-white/20 bg-accent-500">
+                    <td class="border-r p-2 border-white/20"
+                        ><label
+                            class="text-white text-xs order-first p-3 text-center"
+                            for="asunto">Asunto</label
+                        ></td
+                    >
+                    <td
+                        ><input
+                            style="border: none !important; outline: none !important; box-shadow: none !important;"
+                            class="resize-none bg-inherit h-full w-full text-xs p-3 focus:outline-none"
+                            placeholder="Ingresá el asunto del email"
+                            type="text"
+                            id="asunto"
+                            name="asunto"
+                            required
+                        />
+                    </td>
+                </tr>
+                <tr class="border-b border-white/20 bg-accent-500">
+                    <td class="border-r p-2 border-white/20"
+                        ><label
+                            class="text-white text-xs order-first p-3 text-center"
+                            for="mensaje">Mensaje</label
+                        ></td
+                    >
+                    <td>
+                        <textarea
+                        class="resize-none bg-inherit h-full w-full text-xs p-3 focus:outline-none"
+                            placeholder="Dejá tu mensaje"
+                            id="mensaje"
+                            name="mensaje"
+                            rows="4"
+                            cols="50"
+                            required></textarea>
+                    </td>
+                </tr>
+                <tr class="data-enviar">
+                    <td class="border-r p-2 border-white/20">
+                        <p
+                            class="text-white text-xs order-first p-3 text-center"
+                        >
+                            Argentina
+                        </p>
+                    </td>
+                    <td class="text-center items-center">
+                        <button
+                            id="submitMessage"
+                            class="text-white text-xs order-first p-3 text-center font-semibold section-subheading text-muted"
+                            type="submit"
+                            value="Send">Enviar Mensaje</button
+                        >
+                        <div>
+                            <p
+                                id="submitSuccessMessage"
+                                class="text-carrot font-semibold hidden section-subheading text-muted alert"
+                            >
+                                Mensaje Enviado
+                            </p>
+                            <p
+                                id="submitErrorMessage"
+                                class="text-carrot font-semibold hidden section-subheading text-muted alert"
+                            >
+                                Error en el envío del mensaje
+                            </p>
+                        </div>
+                    </td>
+                    <input type="hidden" name="_captcha" value="false" />
+                </tr>
+            </table>
+        </form>
+    </div>
+</section>

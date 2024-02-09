@@ -1,0 +1,63 @@
+---
+import { ViewTransitions } from "astro:transitions";
+---
+
+<header class="flex justify-between">
+    <ViewTransitions />
+    <section
+    class="mx-auto border-white/20 border-t 2xl:max-w-7xl bg-black border-b justify-between lg:fixed lg:z-50 w-full"
+>
+    <div class="mx-auto bg-black justify-center w-full">
+        <div
+            class="mx-auto border-white/20 border-x max-w-7xl flex flex-col lg:flex-row lg:items-center lg:justify-between w-full"
+        >
+            <div
+                class="text-white text-center items-center w-full flex flex-col justify-between md:px-0 sm:flex-row "
+            >
+                <a
+                    href="#"
+                    class="text-white text-xs inline-flex items-center 
+                    lg:py-2 py-2 
+                    px-4 
+                    md:text-center uppercase "
+                    >
+                    <!--font-display -->
+                    <svg class="h-6 w-6 :mx-0 text-white"  
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 50.8 50.8" 
+                    xmlns="http://www.w3.org/2000/svg"><path d="m19.494 7.144a19.226 19.226 0 0 0 -12.35 12.35m36.512 0a19.224 19.224 0 0 0 -12.349-12.348m-24.161 24.16a19.224 19.224 0 0 0 12.348 12.35m11.813-.002a19.222 19.222 0 0 0 12.347-12.347m-18.254-25.487c5.41 17.6 1.986 14.176 19.58 19.58-17.594 5.41-14.17 1.986-19.58 19.58-5.404-17.594-1.98-14.17-19.58-19.58 17.6-5.404 14.176-1.98 19.58-19.58z" 
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+                        stroke-width="2"/></svg>
+                      <span class="font-light sm:hidden lg:block px-2"> Cinthia Romina</span>
+                </a>
+                <a
+                    href="#projects"
+                    class="w-full bg-white duration-200  hover:bg-black hover:text-white lg:ml-auto lg:w-auto px-5 py-3 sm:rounded-full text-black text-center text-xs uppercase"
+                    >Proyectos</a
+                >
+                <a
+                    href="#illustrations"
+                    class="w-full bg-white duration-200 hover:bg-black hover:text-white lg:ml-auto lg:w-auto px-5 py-3 sm:rounded-full text-black text-center text-xs uppercase"
+                    >Ilustraciones</a
+                >
+                <a
+                    href="#technologies"
+                    class="w-full bg-white duration-200 hover:bg-black hover:text-white lg:ml-auto lg:w-auto px-5 py-3 sm:rounded-full text-black text-center text-xs uppercase"
+                    >Tecnologías</a
+                >
+                <a
+                    href="https://drive.google.com/file/d/12ZhP2g-GVRdlZn2hpgQc2hSw4MSkf0Cr/view?usp=drive_link" target="_blank"
+                    class="w-full bg-white duration-200 hover:bg-black hover:text-white lg:ml-auto lg:w-auto px-5 py-3 sm:rounded-full text-black text-center text-xs uppercase"
+                    >Curriculum</a
+                >
+                <a 
+                    href="#contact"
+                    class="w-full bg-carrot duration-200 hover:bg-blacktext-white lg:ml-auto lg:w-auto px-5 py-3 sm:rounded-full text-black hover:text-white text-center text-xs uppercase"
+                    >Contacto</a
+                >
+            </div>
+        </div>
+    </div>
+</section>
+</header>
