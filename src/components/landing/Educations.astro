@@ -1,7 +1,31 @@
-<div
-    class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 mx-auto p-8 sm:grid-cols-2"
+---
+const EDUCATIONS = [
+    {
+        name: "Tecnicatura Superior en Desarrollo de Software",
+        institution: "IFTS N° 29 - CABA",
+        year: "2023 - Actualmente",
+        tags: ["HTML", "CSS", "TypeScript"],
+    },
+    {
+        name: "Tecnicatura Superior en Desarrollo de Software",
+        institution: "IFTS N° 29 - CABA",
+        year: "2023 - Actualmente",
+        tags: ["HTML", "CSS", "TypeScript"],
+    },
+];
+---
+
+<section id="projects">
+    <div
+        class="text-white order-first p-8 text-center lg:border-b lg:border-white/20"
+    >
+        <span class="block font-display text-xl"> FORMACION</span>
+    </div>
+</section>
+<section
+    class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 mx-auto px-8 pb-8 sm:grid-cols-2"
 >
-    <div class="flex flex-col justify-between h-full">
+    <!-- <div class="flex flex-col justify-between h-full">
         <div class="text-[#a02ced]">
             <span class="block font-semibold"
                 >Tecnicatura Superior en Desarrollo de Software</span
@@ -13,23 +37,65 @@
                 >2023 - Actual</span
             >
         </div>
-        <!-- <div class="mt-3 flex justify-around">
+        <div class="mt-3 flex justify-around">
             <img
                 class="w-5"
-                src="../../../src/resources/logo-technologies/800px-HTML5_Badge.svg-min.png"
+                src="../../../public/resources/logo-technologies/800px-HTML5_Badge.svg-min.png"
                 alt="logo tecnología"
             />
             <img
                 class="w-5"
-                src="../../../src/resources/logo-technologies/adobe xd-min.png"
+                src="../../../public/resources/logo-technologies/adobe xd-min.png"
                 alt="logo tecnología"
             />
             <img
                 class="w-5"
-                src="../../../src/resources/logo-technologies/angular-material-logo-min.png"
+                src="../../../public/resources/logo-technologies/angular-material-logo-min.png"
                 alt="logo tecnología"
             />
-        </div> -->
-    </div>
-    
-</div>
+        </div>
+    </div>     -->
+    <ul class="flex flex-row justify-around">
+        {
+            EDUCATIONS.map((education) => (
+                    <li class="flex flex-col justify-between p-2">
+                        <div class="text-[#a02ced]">
+                            <span class="block font-semibold">
+                                {education.name}
+                            </span>
+                            <span class="block text-eagle">
+                                {education.institution}
+                            </span>
+                            <span class="block text-eagle">{education.year}</span>
+                        </div>
+                        <div class="m-3 flex justify-around ">
+                            <img
+                                class="w-5"
+                                src="../../../public/resources/logo-technologies/800px-HTML5_Badge.svg-min.png"
+                                alt="logo tecnología"
+                            />
+                            <img
+                                class="w-5"
+                                src="../../../public/resources/logo-technologies/adobe xd-min.png"
+                                alt="logo tecnología"
+                            />
+                            <img
+                                class="w-5"
+                                src="../../../public/resources/logo-technologies/angular-material-logo-min.png"
+                                alt="logo tecnología"
+                            />                        
+                            <img
+                                class="w-5"
+                                src="../../../public/resources/logo-technologies/angular-material-logo-min.png"
+                                alt="logo tecnología"
+                            /><img
+                                class="w-5"
+                                src="../../../public/resources/logo-technologies/angular-material-logo-min.png"
+                                alt="logo tecnología"
+                            />
+                        </div>
+                    </li>
+                ))
+        }
+    </ul>
+</section>
