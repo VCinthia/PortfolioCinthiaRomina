@@ -4,13 +4,103 @@ const EDUCATIONS = [
         name: "Tecnicatura Superior en Desarrollo de Software",
         institution: "IFTS N° 29 - CABA",
         year: "Marzo 2023 - Actualmente",
-        tags: [".NET", "C#", "Python"],
+        tags: [
+            // ".NET", 
+            // "C#", 
+            // "Python"
+        ],
+    },
+    {
+        name: "Desarrollador Web FullStack Angular - NodeJs",
+        institution: "Santex - Technology with Purpose - CBA",
+        year: "Marzo 2023 - Octubre 2023",
+        tags: [
+            "HTML",
+            "CSS",
+            "TypeScript",
+            "Angular",
+            //"ExpressJs",
+            "MySQL",
+            //"NodeJs",
+            //"AngularMaterial",
+        ],
+    },
+    {
+        name: "UI Adobe | UX Definitivo",
+        institution: "CodeaRock",
+        year: "Enero 2023 - Actualmente",
+        tags: [
+            // "Canva", 
+            // "Figma", 
+            // "Adobe XD"
+        ],
+    },
+    {
+        name: "Programador WEB PHP",
+        institution: "Codo a Codo - CABA",
+        year: "Marzo 2023 - Septiembre 2023",
+        tags: [
+            "HTML", 
+            "CSS", 
+            "JavaScript", 
+            "PHP", 
+            "Bootstrap", 
+            "MySQL"
+        ],
+    },
+    {
+        name: "Desarrollador Web FullStack NestJs",
+        institution: "CFL Tres Arroyos",
+        year: "Marzo 2022 - Diciembre 2022",
+        tags: [
+            "HTML",
+            "CSS",
+            "TypeScript",
+            //"NestJs",
+            "Bootstrap",
+            "MySQL",
+            //"Principios SOLID",
+        ],
+    },
+    {
+        name: "Formación en Datos e Inteligencia Artificial",
+        institution: "UBA - IA LAB",
+        year: "Diciembre 2022 - Febrero 2023",
+        tags: [],
     },
     {
         name: "Desarrollador Web FullStack",
-        institution: "Santex - Technology with Purpose - CBA",
-        year: "Marzo 2023 - Octubre 2023",
-        tags: ["HTML", "CSS", "TypeScript", "Angular", "ExpressJs", "MySQL", "NestJs"],
+        institution: "Alura Oracle - Latam",
+        year: "Marzo 2022 - Ocubre 2022",
+        tags: [ 
+            "HTML", 
+            "CSS", 
+            "JavaScript", 
+            //"Java", 
+            "MySQL", 
+            "Figma" 
+        ],
+    },
+    {
+        name: "Desarrollador Web FullStack Angular - Java",
+        institution: "INTI Argentina Programa",
+        year: "Diciembre 2021 - Julio 2022",
+        tags: [
+            "HTML",
+            "CSS",
+            "TypeScript",
+            "Angular",
+            //"Java",
+            //"SpringBoot",
+            "MySQL",
+            "Bootstrap",
+        ],
+    },
+    {
+        name: "Inglés para Desarrollo de Software",
+        institution: "INTI Argentina Programa",
+        year: "Mayo 2022 - Julio 2022",
+        tags: [],
     },
 ];
 ---
@@ -22,34 +112,35 @@ const EDUCATIONS = [
         <span class="block font-display text-xl"> FORMACION</span>
     </div>
 </section>
-<section class="flex flex-row justify-around"
-    
->
-    <ul  class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 mx-auto px-8 pb-8 sm:grid-cols-2">
+<section class="flex flex-row justify-around">
+    <ul
+        class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 mx-auto px-8 pb-8 sm:grid-cols-2"
+    >
         {
             EDUCATIONS.map((education) => (
-                    <li class="flex flex-col justify-between p-2">
-                        <div class="text-[#a02ced]">
-                            <span class="block font-semibold">
-                                {education.name}
-                            </span>
-                            <span class="block text-eagle">
-                                {education.institution}
-                            </span>
-                            <span class="block text-eagle">{education.year}</span>
-                        </div>
+                <li class="flex flex-col justify-between p-2">
+                    <div class="text-[#a02ced]">
+                        <span class="block font-semibold">
+                            {education.name}
+                        </span>
+                        <span class="block text-eagle">
+                            {education.institution}
+                        </span>
+                        <span class="block text-eagle">{education.year}</span>
+                    </div>                    
                         <div class="my-3 flex justify-around ">
-                            
-                                    {education.tags.map((tag) => (
-                                        <img
-                                            class="w-5 "
-                                            src="../../../resources/logo-technologies/800px-HTML5_Badge.svg-min.png"
-                                            alt={tag}
-                                        />
-                                    ))}
-                                </div>
-                    </li>
-                ))
+                        {education.tags.map((tag) => (
+                            <img
+                                class="w-5 "
+                                src={`../../../resources/logo-technologies/${tag}.png`}
+                                alt={tag}
+                            />
+                        ))}
+                    </div> 
+                    <!--
+                    -->
+                </li>
+            ))
         }
     </ul>
 </section>
