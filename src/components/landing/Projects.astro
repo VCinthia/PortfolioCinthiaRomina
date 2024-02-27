@@ -1,38 +1,47 @@
 ---
 import Technologies from "./Technologies.astro";
 const PROJECTS = [
+{
+        title: "Opal Dev ",
+        description:
+            "Desarrollo WEB",
+        link: "https://opaldev.vercel.app/",
+        github: "https://github.com/VCinthia/PortfolioAstro",
+        img: "/resources/img-projects/m-opal.webp",
+        tags: ["Astro", "TypeScript", "HTML", "Tailwind", "Vercel"],
+    },
     {
         title: "Estudio Integral Errasti & Asoc.",
         description:
             "Estudio Integral de la ciudad de Mar del Plata que ofrece servicios Jurídicos, Contables y Psicología",
         link: "https://estudioerrastiyasoc.com.ar/",
-        github: "#",
+        github: "https://github.com/VCinthia/web-estudio-juridico",
         img: "/resources/img-projects/m-errastiasoc.webp",
-        tags: ["HTML", "CSS", "TypeScript"],
+        tags: ["Angular", "TypeScript", "Bootstrap", "HTML", "CSS"],
     },
     {
         title: "Gestor de Proyectos",
         description: "App Web de Gestión de Proyectos para freelancers",
         link: "https://php-gestordeproyectos.000webhostapp.com/php_gestor_proyectos/index.php",
-        github: "#",
+        github: "https://github.com/VCinthia/gestorDeProyectos",
         img: "/resources/img-projects/m-gestorproy.webp",
-        tags: ["HTML", "CSS", "PHP", "MySQL"],
+        tags: ["PHP", "MySQL", "HTML", "CSS", ],
     },
     {
         title: "Portfolio Web 2023",
         description:
             "Portfolio Web previo realizado en diversas tecnologías y consumiendo base de datos relacional. Deployado en Firebase y Railway. Contiene dominio y DNS",
         link: "https://cinthiavota.com.ar/",
-        github: "#",
+        github: "https://github.com/VCinthia/web-opal",
         img: "/resources/img-projects/m-portfolionestjs.webp",
-        tags: ["Angular", "NestJs", "MySQL", "Firebase"],
+        tags: ["Angular", "NestJs","TypeORM", "TypeScript", "MySQL", "Firebase"],
     },
     {
         title: "Fresco & Congelado",
         description:
             "Landing page desarrollada para el comercio 'Fresco & Congelado' de la ciudad de Mar del Plata",
         link: "https://fresco-y-congelado.firebaseapp.com/",
-        github: "#",
+        github: "https://github.com/VCinthia/FrescoYCongeladoUpd",
         img: "/resources/img-projects/m-frescoycong.webp",
         tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     },
@@ -43,12 +52,12 @@ const PROJECTS = [
         link: "https://github.com/VCinthia/Santex-Mascotas",
         github: "https://github.com/VCinthia/Santex-Mascotas",
         img: "/resources/img-projects/m-santexmascotas.webp",
-        tags: ["Angular", "NestJs", "MySQL", "NPM"],
+        tags: ["Angular", "NestJs", "Sequelize", "TypeScript", "MySQL"],
     },
     {
         title: "Tienda de Videojuegos",
         description: "Proyecto final para Oracle junto Alura: Next Education.",
-        link: "https://github.com/VCinthia/TiendaVideojuegos",
+        link: "https://vcinthia.github.io/TiendaVideojuegos/",
         github: "https://github.com/VCinthia/TiendaVideojuegos",
         img: "/resources/img-projects/m-tiendavideojuegos.webp",
         tags: ["HTML", "CSS", "JavaScript"],
@@ -195,7 +204,7 @@ const PROJECTS = [
                                 </div>
                                 <div class="text-gray-100 text-xs order-first flex p-2 justify-around border-r border-white/20">
                                     <a
-                                        class="block hover:text-carrot"
+                                        class="block hover:text-carrot" target="_blank"
                                         href={project.github}
                                     >
                                         <svg
@@ -208,7 +217,7 @@ const PROJECTS = [
                                         </svg>
                                     </a>
                                     <a
-                                        class="block hover:text-carrot"
+                                        class="block hover:text-carrot"  target="_blank"
                                         href={project.link}
                                     >
                                         <svg
@@ -234,7 +243,7 @@ const PROJECTS = [
                                 <div class="flex justify-around  border-r border-white/20">
                                     {project.tags.map((tag) => (
                                         <img
-                                            class="w-5 my-3  "
+                                            class="h-5 my-3  "
                                             src={`../../../resources/logo-technologies/${tag}.png`}
                                             alt={tag}
                                         />
