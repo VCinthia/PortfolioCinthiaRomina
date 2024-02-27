@@ -1,40 +1,49 @@
 ---
 import Technologies from "./Technologies.astro";
 const PROJECTS = [
+{
+        title: "Opal Dev ",
+        description:
+            "Desarrollo WEB",
+        link: "https://opaldev.vercel.app/",
+        github: "https://github.com/VCinthia/PortfolioAstro",
+        img: "/resources/img-projects/m-opal.webp",
+        tags: ["Astro", "TypeScript", "HTML", "Tailwind", "Vercel"],
+    },
     {
         title: "Estudio Integral Errasti & Asoc.",
         description:
             "Estudio Integral de la ciudad de Mar del Plata que ofrece servicios Jurídicos, Contables y Psicología",
         link: "https://estudioerrastiyasoc.com.ar/",
-        github: "#",
+        github: "https://github.com/VCinthia/web-estudio-juridico",
         img: "/resources/img-projects/m-errastiasoc.webp",
-        tags: ["HTML", "CSS", "TypeScript"],
+        tags: ["Angular", "TypeScript", "Bootstrap", "HTML", "CSS"],
     },
     {
         title: "Gestor de Proyectos",
         description: "App Web de Gestión de Proyectos para freelancers",
         link: "https://php-gestordeproyectos.000webhostapp.com/php_gestor_proyectos/index.php",
-        github: "#",
+        github: "https://github.com/VCinthia/gestorDeProyectos",
         img: "/resources/img-projects/m-gestorproy.webp",
-        tags: ["HTML", "CSS", "PHP", "MySQL"],
+        tags: ["PHP", "MySQL", "HTML", "CSS", ],
     },
     {
         title: "Portfolio Web 2023",
         description:
             "Portfolio Web previo realizado en diversas tecnologías y consumiendo base de datos relacional. Deployado en Firebase y Railway. Contiene dominio y DNS",
         link: "https://cinthiavota.com.ar/",
-        github: "#",
+        github: "https://github.com/VCinthia/web-opal",
         img: "/resources/img-projects/m-portfolionestjs.webp",
-        tags: ["HTML", "CSS", "PHP", "MySQL"],
+        tags: ["Angular", "NestJs","TypeORM", "TypeScript", "MySQL", "Firebase"],
     },
     {
         title: "Fresco & Congelado",
         description:
             "Landing page desarrollada para el comercio 'Fresco & Congelado' de la ciudad de Mar del Plata",
         link: "https://fresco-y-congelado.firebaseapp.com/",
-        github: "#",
+        github: "https://github.com/VCinthia/FrescoYCongeladoUpd",
         img: "/resources/img-projects/m-frescoycong.webp",
-        tags: ["HTML", "CSS", "PHP", "MySQL"],
+        tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     },
     {
         title: "Encuentra a tu Mascota",
@@ -43,35 +52,20 @@ const PROJECTS = [
         link: "https://github.com/VCinthia/Santex-Mascotas",
         github: "https://github.com/VCinthia/Santex-Mascotas",
         img: "/resources/img-projects/m-santexmascotas.webp",
-        tags: ["HTML", "CSS", "PHP", "MySQL"],
+        tags: ["Angular", "NestJs", "Sequelize", "TypeScript", "MySQL"],
     },
     {
         title: "Tienda de Videojuegos",
         description: "Proyecto final para Oracle junto Alura: Next Education.",
-        link: "https://github.com/VCinthia/TiendaVideojuegos",
+        link: "https://vcinthia.github.io/TiendaVideojuegos/",
         github: "https://github.com/VCinthia/TiendaVideojuegos",
         img: "/resources/img-projects/m-tiendavideojuegos.webp",
-        tags: ["HTML", "CSS", "PHP", "MySQL"],
+        tags: ["HTML", "CSS", "JavaScript"],
     },
 ];
 ---
 
-<!-- <section class="border-white/20  border-b ">
-    <div class="mx-auto border-white/20  border-x max-w-7xl gradient-grid">
-      <div class="mx-auto max-w-7xl p-8">
-        <p class="text-white font-display uppercase lg:text-6xl text-xl">
-          Diseño y desarrollo seleccionando la tecnología mas conveniente para cada proyecto
-        </p>
-      </div>
-      <div class="mx-auto max-w-7xl p-8">
-        <p class="text-white font-display uppercase lg:text-3xl">
-            Me especializo en aplicaciones web usando Angular y NestJS. Actualmente estoy incorporando Tailwind CSS!
-            Aún así, utilizo otros lenguajes o herramientas según el proyecto requiera, tales como Astro, Bootstrap o ExpressJS.
-            Quiero desarrollar productos útiles y agradables para clientes y usuarios
-        </p>
-      </div>
-    </div>
-  </section> -->
+
 <section class="border-b border-white/20 bg-accent-500">
     <div
         class="mx-auto max-w-7xl border-white/20 border-x"
@@ -90,72 +84,6 @@ const PROJECTS = [
           },
       }`
     >
-        <section class="border-white/20 border-b">
-            <div class="mx-auto border-white/20 border-x max-w-7xl">
-                <div class="p-8">
-                    <p
-                        class="text-white font-display uppercase text-3xl lg:text-6xl"
-                    >
-                        LO QUE HACEMOS:
-                    </p>
-                </div>
-                <div
-                    class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 mx-auto p-8 sm:grid-cols-2 md:gap-y-0"
-                >
-                    <!--ver cual estilo queda mejor -->
-                    <div>
-                        <div>
-                            <span class="text-[#a02ced] font-display text-xl"
-                                >Desarrollo Digital Integral:</span
-                            >
-                        </div>
-                        <p class="mt-3 text-eagle">
-                            Transformamos tus ideas en experiencias digitales
-                            cautivadoras. Desde el diseño hasta la
-                            implementación, creamos soluciones que destacan.
-                        </p>
-                    </div>
-                    <div>
-                        <div>
-                            <span class="text-[#a02ced] font-display text-xl"
-                                >Diseño Creativo:</span
-                            >
-                        </div>
-                        <p class="mt-3 text-eagle">
-                            Nuestro equipo utiliza su creatividad para diseñar
-                            interfaces atractivas y funcionales, brindando una
-                            experiencia única para tus usuarios.
-                        </p>
-                    </div>
-                    <div>
-                        <div>
-                            <span class="text-[#a02ced] font-display text-xl"
-                                >Optimización y Actualización:</span
-                            >
-                        </div>
-                        <p class="mt-3 text-eagle">
-                            ¿Tu proyecto necesita un impulso? Refrescamos y
-                            mejoramos tu presencia en línea, adaptándonos a las
-                            tendencias actuales.
-                        </p>
-                    </div>
-
-                    <div>
-                        <div>
-                            <span class="text-[#a02ced] font-display text-xl"
-                                >Visibilidad en la Web:</span
-                            >
-                        </div>
-                        <p class="mt-3 text-eagle">
-                            Colocamos tu proyecto en el mapa digital,
-                            asegurándonos de que sea fácilmente descubierto por
-                            tu audiencia.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="border border-white/20 bg-accent-500">
             <div
                 class="mx-auto max-w-7xl border-x border-white/20 px-8 py-12 gradient-grid"
@@ -164,35 +92,34 @@ const PROJECTS = [
                     <h3
                         class="text-3xl font-bold font-display text-white uppercase pb-6"
                     >
-                        DESCUBRE UN MUNDO DE POSIBILIDADES CON OPAL DEV <br />
+                        Conoce los proyectos en los que trabaje ! <br />
                     </h3>
                     <p
                         class="text-xl font-normal font-display text-white uppercase"
                     >
-                        No solo creamos sitios web, diseñamos experiencias
-                        digitales que cautivan y conectan.
+                        Desarrollo productos desde cero como freelance, otros en
+                        equipo a través de cursos y networking.
                     </p>
                 </div>
             </div>
         </section>
         <section id="projects">
-            <div class="text-white order-first p-8 text-center lg:border-b lg:border-white/20" >
-                    <span class="block font-display text-xl">
-                        PROYECTOS
-                    </span>
-                </div>
+            <div
+                class="text-white order-first p-8 text-center border-b border-white/20 "
+            >
+                <span class="block font-display text-xl"> PROYECTOS</span>
+            </div>
         </section>
-        <section        
+        <section
             class="splide is-initialized splide--slide splide--ltr splide--draggable is-active"
             aria-label="Splide/Alpine.js"
             x-ref="splide"
             id="splide01"
             aria-roledescription="carousel"
         >
-        
-            <div class="splide__arrows splide__arrows--ltr items-center ">
+            <div class="splide__arrows splide__arrows--ltr items-center">
                 <button
-                    class="splide__arrow splide__arrow--prev bg-white "
+                    class="splide__arrow splide__arrow--prev bg-white"
                     type="button"
                     aria-label="Previous slide"
                     aria-controls="splide01-track"
@@ -254,62 +181,79 @@ const PROJECTS = [
                     {
                         PROJECTS.map((project) => (
                             <li
-                                class="flex justify-center flex-col splide__slide is-prev"
+                                class="flex justify-center flex-col splide__slide is-prev "
                                 id="splide01-slide03"
                                 role="tabpanel"
                                 aria-roledescription="slide"
                                 aria-label="3 of 4"
                                 style="margin-right: 0.5rem; width: calc(((100% + 0.5rem) / 1) - 0.5rem);"
                                 aria-hidden="true"
-                                > 
-                                <a href={project.link} target='_blank'>                                    
+                            >
+                                <a>
                                     <img
                                         alt={project.title}
-                                        class="w-full object-cover object-center bg-white border-t border-black lg:border-r hover:opacity-95 cursor-pointer"
+                                        class="w-full object-cover object-center bg-white border-t border-black border-r "
                                         src={project.img}
-                                        
-                                        
                                     />
-                                    </a>  
-                                <div class="text-white text-xs order-first pb-3 text-center lg:border-r lg:border-white/20">
-                                    <span class="block  font-bold">
+                                </a>
+                                
+                                <div class="text-white text-xs order-first pb-3 text-center border-r border-white/20  p-2">
+                                    <span class="block  font-semibold">
                                         {project.title}
                                     </span>
                                 </div>
-                                <!-- NO VA 
-                                    <div class="text-white text-xs order-first flex p-1 justify-around lg:border-r lg:border-white/20">
-                                     <a
-                                        class="block hover:text-carrot"
+                                <div class="text-gray-100 text-xs order-first flex p-2 justify-around border-r border-white/20">
+                                    <a
+                                        class="block hover:text-carrot" target="_blank"
                                         href={project.github}
                                     >
-                                        Github
-                                    </a> 
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                    </a>
                                     <a
-                                        class="block hover:text-carrot"
+                                        class="block hover:text-carrot"  target="_blank"
                                         href={project.link}
                                     >
-                                        Link                                        
-                                    </a> 
-                                </div> 
-                                -->
-                                <!-- NO VA 
-                                <div class="m-3 flex justify-around ">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            class="w-5 h-5"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z"
+                                                clip-rule="evenodd"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <div class="flex justify-around  border-r border-white/20">
                                     {project.tags.map((tag) => (
                                         <img
-                                            class="w-5 "
-                                            src="../../../resources/logo-technologies/800px-HTML5_Badge.svg-min.png"
+                                            class="h-5 my-3  "
+                                            src={`../../../resources/logo-technologies/${tag}.png`}
                                             alt={tag}
                                         />
                                     ))}
                                 </div>
-                            -->
                             </li>
                         ))
                     }
-                    <!-- -->
                 </ul>
             </div>
         </section>
     </div>
 </section>
-<!-- <Technologies /> -->

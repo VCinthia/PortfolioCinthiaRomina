@@ -1,35 +1,146 @@
-<div
-    class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 mx-auto p-8 sm:grid-cols-2"
->
-    <div class="flex flex-col justify-between h-full">
-        <div class="text-[#a02ced]">
-            <span class="block font-semibold"
-                >Tecnicatura Superior en Desarrollo de Software</span
-            >
-            <span class="block text-eagle"
-                >IFTS N° 29 - CABA</span
-            >
-            <span class="block text-eagle"
-                >2023 - Actual</span
-            >
-        </div>
-        <!-- <div class="mt-3 flex justify-around">
-            <img
-                class="w-5"
-                src="../../../src/resources/logo-technologies/800px-HTML5_Badge.svg-min.png"
-                alt="logo tecnología"
-            />
-            <img
-                class="w-5"
-                src="../../../src/resources/logo-technologies/adobe xd-min.png"
-                alt="logo tecnología"
-            />
-            <img
-                class="w-5"
-                src="../../../src/resources/logo-technologies/angular-material-logo-min.png"
-                alt="logo tecnología"
-            />
-        </div> -->
+---
+const EDUCATIONS = [
+    {
+        name: "Tecnicatura Superior en Desarrollo de Software",
+        institution: "IFTS N° 29 - CABA",
+        year: "Marzo 2023 - Actualmente",
+        tags: [
+            "Net2", 
+            "C", 
+            "Python",
+        ],
+    },
+    {
+        name: "Desarrollador Web FullStack Angular - NodeJs",
+        institution: "Santex - Technology with Purpose - CBA",
+        year: "Marzo 2023 - Octubre 2023",
+        tags: [
+            "Angular",
+            "Express",
+            "Node",
+            "Sequelize",
+            "TypeScript",
+            "MySQL",            
+            "AngularMaterial",
+        ],
+    },
+    {
+        name: "UI Adobe | UX Definitivo",
+        institution: "CodeaRock",
+        year: "Enero 2023 - Actualmente",
+        tags: [
+            "Milanote", 
+            "Figma", 
+            "AdobeXD"
+        ],
+    },
+    {
+        name: "Programador WEB PHP",
+        institution: "Codo a Codo - CABA",
+        year: "Marzo 2023 - Septiembre 2023",
+        tags: [
+            "HTML", 
+            "CSS", 
+            "JavaScript", 
+            "PHP", 
+            "Bootstrap", 
+            "MySQL"
+        ],
+    },
+    {
+        name: "Desarrollador Web FullStack NestJs",
+        institution: "CFL Tres Arroyos",
+        year: "Marzo 2022 - Diciembre 2022",
+        tags: [        
+            "NestJs",
+            "TypeORM",
+            "TypeScript",
+            "MySQL",
+            "HTML",
+            "CSS",            
+            "Bootstrap",            
+            //"Solid",
+        ],
+    },
+    {
+        name: "Formación en Datos e Inteligencia Artificial",
+        institution: "UBA - IA LAB",
+        year: "Diciembre 2022 - Febrero 2023",
+        tags: ["Python"],
+    },
+    {
+        name: "Desarrollador Web FullStack",
+        institution: "Alura Oracle - Latam",
+        year: "Marzo 2022 - Ocubre 2022",
+        tags: [ 
+            "HTML", 
+            "CSS", 
+            "JavaScript", 
+            "Java", 
+            "MySQL", 
+            "Figma" 
+        ],
+    },
+    {
+        name: "Desarrollador Web FullStack Angular - Java",
+        institution: "INTI Argentina Programa",
+        year: "Diciembre 2021 - Julio 2022",
+        tags: [
+            "Angular",
+            "Java",
+            "SpringBoot",
+            "TypeScript",
+            "HTML",
+            "CSS",
+            "MySQL",
+            "Bootstrap",
+        ],
+    },
+    {
+        name: "Inglés para Desarrollo de Software",
+        institution: "INTI Argentina Programa",
+        year: "Mayo 2022 - Julio 2022",
+        tags: [],
+    },
+];
+---
+
+<section >
+    <div
+        class="text-white order-first p-8 text-center lg:border-b lg:border-white/20"
+    >
+        <span class="block font-display text-xl "> FORMACION</span>
     </div>
-    
-</div>
+</section>
+<section class="flex flex-row justify-around">
+    <ul
+        class="text-white text-xs gap-3 gap-y-8 grid grid-cols-1 md:grid-cols-3 mx-auto px-8 pb-8 sm:grid-cols-2 w-full lg:p-12"
+    >
+        {
+            EDUCATIONS.map((education) => (
+                <li class="flex flex-col justify-between px-2">
+                    <div class="text-[#a02ced]">
+                        <span class="block font-semibold">
+                            {education.name}
+                        </span>
+                        <span class="block text-eagle">
+                            {education.institution}
+                        </span>
+                        <span class="block text-eagle">{education.year}</span>
+                    </div>                    
+                        <div class="mt-3 mx-2 flex justify-between items-center ">
+                        {education.tags.map((tag) => (
+                            <img
+                                class="h-5 "
+                                src={`../../../resources/logo-technologies/${tag}.png`}
+                                alt={tag}
+                            />
+                        ))}
+                    </div> 
+                    <!--
+                    -->
+                </li>
+            ))
+        }
+    </ul>
+</section>
